@@ -1,11 +1,19 @@
-import { IQuote } from "./interface"
-import { fetchQuotes } from "./api"
-let quote : IQuote[] = []
-/**
- * Get quotes
- */
-const getQuotes = async () => {
-  quote = await fetchQuotes()
-  console.log(quote)
-}
+import { getQuotes, renderAllQuotes } from "./functions";
+
+
 getQuotes()
+
+/**
+ * 'Create' Buttons
+ */
+
+document.querySelector('#rnd__btn')!.addEventListener('click', () => {
+
+})
+document.querySelector('#all__btn')!.addEventListener('click', () => {
+  renderAllQuotes()
+})  
+document.querySelector('#clr__btn')!.addEventListener('click', () => {
+  
+})
+
