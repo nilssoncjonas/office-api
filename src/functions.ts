@@ -7,14 +7,13 @@ let quotes : IQuotes[] = []
  * Render Quotes to DOM
  */
 export const renderAllQuotes = async () => {
-  // add loading icon
+  document.querySelector('#loading')!.classList.remove('hidden')
   try {
     quotes = await fetchQuotes()
-    console.log(quotes)
   } catch (err) {
     console.log(err)
   }
-  // remove loading icon
+  document.querySelector('#loading')!.classList.add('hidden')
   document.querySelector('#quotes')!.innerHTML = quotes
   .map( q => `<li>${q.content}</li>`).join('')
 }
@@ -23,14 +22,13 @@ export const renderAllQuotes = async () => {
  * Render random Quote
  */
 export const renderRandomQuote = async () => {
-   // add loading icon
+  document.querySelector('#loading')!.classList.remove('hidden')
    try {
     quotes = await fetchQuotes()
-    console.log(quotes)
   } catch (err) {
     console.log(err)
   }
-  // remove loading icon
+  document.querySelector('#loading')!.classList.add('hidden')
   shuffle(quotes)
   document.querySelector('#rnd__quote')!.innerHTML = `
   <p>${quotes[0].content} <span>${quotes[0].name}</span></p>`

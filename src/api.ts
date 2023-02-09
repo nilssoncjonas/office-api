@@ -1,4 +1,4 @@
-import { IQuote } from "./interface";
+import { IQuotes } from "./interface";
 
 
 const BASE_URL = ' http://localhost:3001'
@@ -11,5 +11,5 @@ export const fetchQuotes = async () => {
   if (!res.ok) {
     throw new Error(`${res.status} ${res.statusText}`)
   }
-  return await res.json() as IQuote[]
+  return await res.json() as IQuotes[]
 }

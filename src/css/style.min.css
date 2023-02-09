@@ -24,6 +24,21 @@ body {
   background-position: center;
 }
 
+@keyframes spin {
+  50% {
+    transform: rotate(720deg);
+  }
+}
+#loading {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  animation: spin 1.5s infinite;
+}
+#loading img {
+  width: 50px;
+}
+
 header {
   width: 100%;
   margin-top: 2rem;
@@ -52,7 +67,7 @@ li > button {
 
 #rnd__quote {
   max-width: 550px;
-  margin: 2rem auto;
+  margin: 5rem auto;
   padding: 1rem;
 }
 #rnd__quote span {
@@ -61,10 +76,6 @@ li > button {
   margin-top: 0.5rem;
 }
 
-#quotes {
-  max-height: 100vh;
-  overflow-x: scroll;
-}
 #quotes li {
   max-width: 500px;
   list-style: none;
@@ -80,9 +91,19 @@ li > button {
   list-style: none;
 }
 
+#about {
+  margin: 2.5rem auto;
+  max-width: 500px;
+  padding: 1rem;
+}
+
 footer {
   margin-top: auto;
-  padding: 2rem 0;
+  padding: 0.75rem 0;
+}
+footer span {
+  display: block;
+  font-size: 0.9rem;
 }
 
 .hidden {
