@@ -61,6 +61,10 @@ li > button {
   margin-top: 0.5rem;
 }
 
+#quotes {
+  max-height: 100vh;
+  overflow-x: scroll;
+}
 #quotes li {
   max-width: 500px;
   list-style: none;
@@ -83,4 +87,9 @@ footer {
 
 .hidden {
   display: none;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+  color: #fff;
 }/*# sourceMappingURL=style.min.css.map */

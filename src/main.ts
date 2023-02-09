@@ -20,6 +20,9 @@ document.querySelector('#all__btn')!.addEventListener('click', () => {
 
 document.querySelector('#clr__btn')!.addEventListener('click', () => {
   clearAll()
-})
-    
+})    
 
+document.querySelector('#a__about')!.addEventListener('click', () => {
+  clearAll()
+  document.querySelector('#about')!.classList.toggle('hidden')
+})

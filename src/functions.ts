@@ -48,10 +48,12 @@ export const clearAll = () => {
   }, 500);
 }
 export const clearQuote = () => {
+  document.querySelector('#about')!.classList.add('hidden')
     document.querySelector('#rnd__quote')!.innerHTML = ''
     document.querySelector('#rnd__quote')!.classList.add('hidden')
 }
 export const clearQuotes = () => {
+  document.querySelector('#about')!.classList.add('hidden')
     document.querySelector('#quotes')!.innerHTML = ''
     document.querySelector('#quotes')!.classList.add('hidden')
 }
