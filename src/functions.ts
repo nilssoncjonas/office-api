@@ -37,6 +37,21 @@ export const renderRandomQuote = async () => {
 }
 
 /**
+ * Clear rendered quotes
+ */
+export const clearAll = () => {
+  setTimeout(() => {
+    document.querySelector('#quotes')!.innerHTML = ''
+    document.querySelector('#rnd__quote')!.innerHTML = ''
+  }, 750);
+}
+export const clearQuote = () => {
+    document.querySelector('#rnd__quote')!.innerHTML = ''
+}
+export const clearQuotes = () => {
+    document.querySelector('#quotes')!.innerHTML = ''
+}
+/**
  * Fisher-Yates Shuffle functions
  */
 const shuffle = (a: any) => {
