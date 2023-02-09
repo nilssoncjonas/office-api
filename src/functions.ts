@@ -1,27 +1,41 @@
-import { IQuote } from "./interface"
+import { IQuotes } from "./interface"
 import { fetchQuotes } from "./api"
-let quote : IQuote[] = []
-/**
- * Get quotes
- */
-export const getQuotes = async () => {
-  quote = await fetchQuotes()
-  console.log(quote)  
-}
+
+let quotes : IQuotes[] = []
+
 /**
  * Render Quotes to DOM
  */
-export const renderAllQuotes = () => {
-  document.querySelector('#quotes')!.innerHTML = quote
+export const renderAllQuotes = async () => {
+  // add loading icon
+  try {
+    quotes = await fetchQuotes()
+    console.log(quotes)
+  } catch (err) {
+    console.log(err)
+  }
+  // remove loading icon
+  document.querySelector('#quotes')!.innerHTML = quotes
   .map( q => `<li>${q.content}</li>`).join('')
 }
 
 /**
  * Render random Quote
  */
-export const renderRandomQuote = () => {
- 
+export const renderRandomQuote = async () => {
+   // add loading icon
+   try {
+    quotes = await fetchQuotes()
+    console.log(quotes)
+  } catch (err) {
+    console.log(err)
+  }
+  // remove loading icon
+  shuffle(quotes)
+  document.querySelector('#rnd__quote')!.innerHTML = `
+  <p>${quotes[0].content} <span>${quotes[0].name}</span></p>`
 }
+
 /**
  * Fisher-Yates Shuffle functions
  */
