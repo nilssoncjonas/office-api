@@ -19,6 +19,9 @@ body {
   color: #fff;
   font-family: typewriter;
   font-display: optional;
+  background-image: url("../img/dwight_schrute_org.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 header {

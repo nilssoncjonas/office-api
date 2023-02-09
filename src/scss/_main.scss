@@ -16,6 +16,9 @@ body {
   color: #fff;
   font-family: typewriter;
   font-display: optional;
+  background-image: url('../img/dwight_schrute_org.png');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 
@@ -70,8 +73,7 @@ li > button {
 .list {
   display: flex;
   justify-content: space-around;
-  flex-direction: row;
-    
+  flex-direction: row;    
   list-style: none;
 }
 
