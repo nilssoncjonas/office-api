@@ -6,7 +6,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+main {
+  p {
+    font-size: 2rem;
+  }
+}
 body {
   min-height: 100vh;
   display: flex;
