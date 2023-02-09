@@ -41,15 +41,19 @@ export const renderRandomQuote = async () => {
  */
 export const clearAll = () => {
   setTimeout(() => {
-    document.querySelector('#quotes')!.innerHTML = ''
     document.querySelector('#rnd__quote')!.innerHTML = ''
-  }, 750);
+    document.querySelector('#rnd__quote')!.classList.add('hidden')
+    document.querySelector('#quotes')!.innerHTML = ''
+    document.querySelector('#quotes')!.classList.add('hidden')
+  }, 500);
 }
 export const clearQuote = () => {
     document.querySelector('#rnd__quote')!.innerHTML = ''
+    document.querySelector('#rnd__quote')!.classList.add('hidden')
 }
 export const clearQuotes = () => {
     document.querySelector('#quotes')!.innerHTML = ''
+    document.querySelector('#quotes')!.classList.add('hidden')
 }
 /**
  * Fisher-Yates Shuffle functions

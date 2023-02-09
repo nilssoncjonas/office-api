@@ -1,3 +1,61 @@
 * {
-  outline: solid red 1px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  margin-top: 2rem;
+}
+header nav {
+  margin: 2rem auto;
+}
+
+li > button {
+  padding: 0.25rem 0.75rem;
+  border-radius: 10px;
+}
+
+#rnd__quote {
+  max-width: 550px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+#rnd__quote span {
+  display: block;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+#quotes li {
+  max-width: 500px;
+  list-style: none;
+  padding: 1rem;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3rem;
+  list-style: none;
+}
+
+footer {
+  margin-top: auto;
+  padding: 2rem 0;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=style.min.css.map */

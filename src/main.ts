@@ -8,11 +8,13 @@ import { clearAll, clearQuote, clearQuotes, renderAllQuotes, renderRandomQuote }
 
 document.querySelector('#rnd__btn')!.addEventListener('click', () => {
   clearQuotes()
+  document.querySelector('#rnd__quote')!.classList.remove('hidden')
   renderRandomQuote()
 })
 
 document.querySelector('#all__btn')!.addEventListener('click', () => {
   clearQuote()
+  document.querySelector('#quotes')!.classList.remove('hidden')
   renderAllQuotes()
 })  
 
