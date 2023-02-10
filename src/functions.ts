@@ -1,7 +1,7 @@
-import { IQuotes } from "./interface"
+import { IObject } from "./interface"
 import { fetchQuotes } from "./api"
 
-let quotes : IQuotes[] = []
+let quotes: IObject
 
 /**
  * Render Quotes to DOM
@@ -14,7 +14,7 @@ export const renderAllQuotes = async () => {
     console.log(err)
   }
   document.querySelector('#loading')!.classList.add('hidden')
-  document.querySelector('#quotes')!.innerHTML = quotes
+  document.querySelector('#quotes')!.innerHTML = quotes.data
   .map( q => `<li>${q.content}</li>`).join('')
 }
 
@@ -28,10 +28,10 @@ export const renderRandomQuote = async () => {
   } catch (err) {
     console.log(err)
   }
+  shuffle(quotes.data)
   document.querySelector('#loading')!.classList.add('hidden')
-  shuffle(quotes)
   document.querySelector('#rnd__quote')!.innerHTML = `
-  <p>${quotes[0].content} <span>${quotes[0].name}</span></p>`
+  <p>${quotes.data[0].content} <span>${quotes.data[0].name}</span></p>`
 }
 
 /**

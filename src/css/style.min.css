@@ -21,7 +21,7 @@ body {
   text-align: center;
   background-color: #e0841d;
   color: #fff;
-  font-family: typewriter;
+  font-family: typewriter, "Courier New", Courier, monospace;
   font-display: optional;
   background-image: url("../img/dwight_schrute_org.png");
   background-repeat: no-repeat;
@@ -77,6 +77,8 @@ li > button {
 #rnd__quote span {
   display: block;
   text-align: right;
+  font-size: 1.3rem;
+  font-style: italic;
   margin-top: 0.5rem;
 }
 
@@ -96,9 +98,18 @@ li > button {
 }
 
 #about {
-  margin: 2.5rem auto;
+  margin: 0 auto;
   max-width: 500px;
   padding: 1rem;
+}
+#about p {
+  font-size: 1rem;
+  margin: 1rem;
+  line-height: 2rem;
+}
+#about p span {
+  margin: 1rem;
+  display: block;
 }
 
 footer {

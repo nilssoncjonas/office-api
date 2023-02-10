@@ -1,7 +1,7 @@
-import { IQuotes } from "./interface";
+import { IObject } from "./interface";
 
 
-const BASE_URL = ' http://localhost:3001'
+const BASE_URL = ' http://localhost:3000'
 const PATH = '/quotes'
 const FAKE_SLOW_API = true;
 const FAKE_SLOW_API_DELAY = 1000;
@@ -16,5 +16,5 @@ export const fetchQuotes = async () => {
   if (!res.ok) {
     throw new Error(`${res.status} ${res.statusText}`)
   }
-  return await res.json() as IQuotes[]
+  return await res.json() as IObject
 }

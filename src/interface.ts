@@ -6,3 +6,8 @@ export interface IQuotes {
   content: string,
   name: string
 }
+
+export interface IObject {
+  status: string,
+  data: Array<IQuotes>
+}
