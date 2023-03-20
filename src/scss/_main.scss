@@ -10,6 +10,7 @@ main {
   p {
     font-size: 2rem;
   }
+
 }
 body {
   min-height: 100vh;
@@ -35,8 +36,13 @@ body {
     width: 50px;
   }
 }
-
+.p__info {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 2rem;
+}
 header {
+
 width: 100%;
 margin-top: 2rem;
   h1 {    

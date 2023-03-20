@@ -1,7 +1,8 @@
 import { IObject } from "./interface";
 
 
-const BASE_URL = 'https://wicked-cyan-dirndl.cyclic.app/'
+const BASE_URL = ''
+// const BASE_URL = 'https://wicked-cyan-dirndl.cyclic.app/'
 // const BASE_URL = 'http://localhost:3000'
 const PATH = '/quotes'
 const FAKE_SLOW_API = false;

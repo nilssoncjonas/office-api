@@ -43,6 +43,12 @@ body {
   width: 50px;
 }
 
+.p__info {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
 header {
   width: 100%;
   margin-top: 2rem;
